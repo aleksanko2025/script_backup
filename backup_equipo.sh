@@ -21,7 +21,7 @@ fi
 
 function mk_dir(){
 
-dir_name=$(date +"%Y-%m-%d_%H-%M-%S")
+dir_name=$(date +"%Y-%m-%d")-full
 
 if sudo mkdir "/mnt/copias_seguridad/$dir_name"; then
 	echo "Directorio creado: $dir_name"
@@ -55,7 +55,7 @@ fi
 
 function fich_paquetes(){
 
-dir_name=$(date +"%Y-%m-%d_%H-%M-%S")
+dir_name=$(date +"%Y-%m-%d")-full
 destino="/mnt/copias_seguridad/$dir_name"
 
 dpkg --get-selections > "$destino/pkg_instalados.txt"
