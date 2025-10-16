@@ -67,7 +67,7 @@ dpkg --get-selections > "$destino/pkg_instalados.txt"
 
 function backup(){
 
-dir_name=$(date +"%Y-%m-%d_%H-%M-%S")
+dir_name=$(date +"%Y-%m-%d")-full
 destino="/mnt/copias_seguridad/$dir_name"
 
 echo "Iniciando copia de seguridad del sistema en $destino..."
